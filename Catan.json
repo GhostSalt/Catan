@@ -1,0 +1,13 @@
+{
+    "id": "GSCatan",
+    "name": "Catan",
+    "author": ["GhostSalt"],
+    "description": "Adds Resource cards that can be used to build other consumables! Mechanics are inspired by the board game Catan. This mod used to be a mechanic present in Phanta, but it got large enough to be its own thing.",
+    "prefix": "catan",
+    "main_file": "main.lua",
+    "badge_colour": "c89d65",
+    "dependencies": [
+        "Steamodded (1.0.0~BETA-0608a-STEAMODDED)"
+    ],
+    "version": "1.0.0~ALPHA"
+}
