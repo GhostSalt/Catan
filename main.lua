@@ -49,7 +49,7 @@ if next(SMODS.find_mod('CardSleeves')) then assert(SMODS.load_file("items/Sleeve
 
 local cfbs = G.FUNCS.check_for_buy_space
 G.FUNCS.check_for_buy_space = function(card)
-  if card.config.center.set == "catan_CatanResource" then return true end
+  if card.config.center.set == "catan_Resource" then return true end
   return cfbs(card)
 end
 
