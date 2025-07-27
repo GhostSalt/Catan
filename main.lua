@@ -22,7 +22,7 @@ function find_consumable(key)
 end
 
 function count_settlements()
-  return #SMODS.find_card("c_phanta_settlement")
+  return #SMODS.find_card("c_catan_settlement")
 end
 
 local allFolders = { "none", "items" }
@@ -49,19 +49,19 @@ if next(SMODS.find_mod('CardSleeves')) then assert(SMODS.load_file("items/Sleeve
 
 local cfbs = G.FUNCS.check_for_buy_space
 G.FUNCS.check_for_buy_space = function(card)
-  if card.config.center.set == "phanta_CatanResource" then return true end
+  if card.config.center.set == "catan_CatanResource" then return true end
   return cfbs(card)
 end
 
 local update_ref = Game.update
 function Game:update(dt)
-  if not G.GAME.phanta_catanresource_rate_cache then G.GAME.phanta_catanresource_rate_cache = 0 end
-  if not G.GAME.phanta_catandevelopmentcard_rate_cache then G.GAME.phanta_catandevelopmentcard_rate_cache = 0 end
-  if not G.GAME.phanta_catanbuilding_rate_cache then G.GAME.phanta_catanbuilding_rate_cache = 0 end
+  if not G.GAME.catan_resource_rate_cache then G.GAME.catan_resource_rate_cache = 0 end
+  if not G.GAME.catan_developmentcard_rate_cache then G.GAME.catan_developmentcard_rate_cache = 0 end
+  if not G.GAME.catan_building_rate_cache then G.GAME.catan_building_rate_cache = 0 end
 
-  G.GAME.phanta_catanresource_rate = G.GAME.phanta_catanresource_rate_cache
-  G.GAME.phanta_catandevelopmentcard_rate = G.GAME.phanta_catandevelopmentcard_rate_cache
-  G.GAME.phanta_catanbuilding_rate = G.GAME.phanta_catanbuilding_rate_cache
+  G.GAME.catan_resource_rate = G.GAME.catan_resource_rate_cache
+  G.GAME.catan_developmentcard_rate = G.GAME.catan_developmentcard_rate_cache
+  G.GAME.catan_building_rate = G.GAME.catan_building_rate_cache
 
   return update_ref(self, dt)
 end
