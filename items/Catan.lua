@@ -1174,14 +1174,14 @@ G.FUNCS.catan_craft_city = function(e)
         'craft_city')
       new_card:add_to_deck()
       G.consumeables:emplace(new_card)
-      G.SETTINGS.paused = true
-      G.FUNCS.overlay_menu {
-        definition = create_catan_menu()
-      }
+      return true
     end
   }))
   if G.OVERLAY_MENU then G.FUNCS.exit_overlay_menu() end
-  create_catan_menu()
+  G.SETTINGS.paused = true
+  G.FUNCS.overlay_menu {
+    definition = create_catan_menu()
+  }
 end
 
 G.FUNCS.catan_craft_development_card = function(e)
@@ -1201,6 +1201,10 @@ G.FUNCS.catan_craft_development_card = function(e)
         'craft_development_card')
       new_card:add_to_deck()
       G.consumeables:emplace(new_card)
+      G.SETTINGS.paused = true
+      G.FUNCS.overlay_menu {
+        definition = create_catan_menu()
+      }
       return true
     end
   }))
