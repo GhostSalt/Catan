@@ -1,0 +1,9 @@
+{
+    "name": "Catan",
+    "description": "Adds Resource cards that can be used to build other consumables!",
+    "version_number": "1.2.1",
+    "dependencies": [
+        "Steamodded-Steamodded-26.829.0"
+    ],
+    "website_url": "https://github.com/GhostSalt/Catan"
+}
